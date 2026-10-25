@@ -13,3 +13,19 @@ Tres casos de bases de datos relacionales que resolví con SQL: uno de **diseño
 | [Exámenes finales](examenes-triggers-y-procedimientos) | Una institución educativa necesita controlar quién puede rendir | Triggers con cursor para limitar aplazos y un procedimiento almacenado de alumnos habilitados |
 
 Cada carpeta tiene su propio README con el problema, la solución y el orden de ejecución.
+
+## Los casos de un vistazo
+
+### [Foro de posteos](foro-diseno-de-base-de-datos): diseño
+
+![Diagrama entidad-relación del foro](foro-diseno-de-base-de-datos/diagrama-entidad-relacion.png)
+
+### [Electrodomésticos](electrodomesticos-migracion-de-modelo): migración sin perder datos
+
+![Modelo de datos con la nueva tabla ventas](electrodomesticos-migracion-de-modelo/modelo-de-datos.png)
+
+![El modelo original en SQL Server Management Studio](electrodomesticos-migracion-de-modelo/programacion.png)
+
+### [Exámenes finales](examenes-triggers-y-procedimientos): triggers y procedimientos
+
+![El script de triggers en SQL Server Management Studio](examenes-triggers-y-procedimientos/programacion.png)

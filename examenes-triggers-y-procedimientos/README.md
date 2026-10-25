@@ -29,6 +29,10 @@ Los alumnos solo pueden rendir materias que hayan cursado y no se permite el exa
 
 La regla se controla en cualquier momento en que pueda violarse, no solo cuando el alumno se inscribe.
 
+![El script de triggers en SQL Server Management Studio](programacion.png)
+
+*El script de triggers, paso a paso: primero la consulta que detecta las filas que no cumplen la regla.*
+
 ## 2. Alumnos que pueden rendir
 
 Un **procedimiento almacenado** recibe el código de una materia y una fecha de examen, y devuelve los alumnos que pueden rendirla ese día. Un alumno puede rendir si:
@@ -44,6 +48,7 @@ Devuelve el número de alumno, el nombre y el año de cursado en estado regular.
 01_modelo_y_datos.sql                       Tablas del modelo y datos de carga
 02_triggers_aplazos.sql                     Consulta de control y triggers INSERT / UPDATE con cursor
 03_procedimiento_alumnos_habilitados.sql    Procedimiento almacenado
+programacion.png                            Captura del script de triggers en SQL Server
 ```
 
 Orden de ejecución: `01`, `02` y `03`.

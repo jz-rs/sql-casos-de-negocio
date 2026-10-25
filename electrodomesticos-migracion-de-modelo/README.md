@@ -18,6 +18,10 @@ El modelo original solo permitía una venta al cliente por producto. Había que 
 * Tenía que llegar a la nueva estructura **paso a paso**, de modo que almacene lo nuevo y lo viejo.
 * El orden de las operaciones es crítico: una columna con una regla de integridad no se puede eliminar, primero hay que eliminar la regla y después la columna.
 
+![El modelo original en SQL Server Management Studio](programacion.png)
+
+*El modelo original: `electrodomesticos` guarda el cliente y la fecha de venta, con una restricción `CHECK` que hay que eliminar antes de migrar.*
+
 ## Cómo lo resolví
 
 1. Creé la tabla `ventas`, que registra cada venta de un electrodoméstico: `nro_venta`, `nro_serie`, `nro_cliente` y `fecha_venta`.
@@ -34,6 +38,8 @@ Además armé una consulta sobre el modelo original: **cantidad de partes utiliz
 01_modelo.sql                    Creación del modelo relacional (tablas, claves, restricciones)
 02_migracion_ventas.sql          Migración a la tabla ventas, paso a paso
 03_consulta_partes_por_anio.sql  Reporte de partes usadas por año de fabricación
+modelo-de-datos.png              Modelo de datos con la nueva tabla ventas
+programacion.png                 Captura del modelo original en SQL Server
 ```
 
 Orden de ejecución: `01`, `02` y `03`.
